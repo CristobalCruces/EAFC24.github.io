@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<style type="text/css">
+
+    footer{
+
+  position:fixed;
+   left:0px;
+   bottom:0px;
+   width:100%;
+   style="background-color:#fff;
+}
+
+body{
+    background-image: url(https://img.freepik.com/foto-gratis/cielo-estrellado_1048-11828.jpg?size=626&ext=jpg);
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+
+.card{
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: translateY(-3%);
+}
+.card img{
+    width: 100%;
+    height: 210px;
+}
+/*contenido de las tarjetas*/
+.card .contenido{
+    padding: 15px;
+    text-align: center;
+}
+/*parrafos de las tarjetas*/
+.card .contenido p{
+    line-height: 1.5;
+    color: #6a6a6a;
+}
+/*el titulo de la tarjeta*/
+.card .contenido h3{
+    font-weight: 100%;
+    margin-bottom: 30px;
+}
+/*leer mas de las tarjetas*/
+.card .contenido a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: #2fb4cc;
+    border: 1px solid #2fb4cc;
+    border-radius: 4px;
+    transition: all 400ms ease;
+}
+.card .contenido a:hover{
+    background: #2fb4cc;
+    color: #fff;
+}
+
+h1{
+    color: #fff;
+    font-size: 4rem;
+    margin-top: 0;
+    margin-bottom: 80px;
+    cursor: default;
+}
+h1 span{
+    color: #2fb4cc;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 80px;
+    cursor: default;
+}
+.textos{
+   
+    float: left;
+    padding: 55px;
+    color: #fff;
+    text-align: center;
+}
+.contenedor{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#myCarousel {
+    margin-top: 20px; /* Ajusta la distancia desde la parte superior según sea necesario */
+   align-items: center;
+  }
+
+  /* Estilo para las imágenes del carrusel */
+  .carousel-inner img {
+    width: 100%;
+    height: 350px;
+     margin-bottom: 80px;
+    cursor: default;
+  }
+
+
+
+
+</style>
+<link rel="shorcut icon"
+href="data:image/png;base64,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" type="image/png"/>
+
+
+
+    
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<title>TIPS</title>
+
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark" style="background-color: ##000;">
+  <div class="container-fluid">
+    <a class="navbar-brand"  href= " https://www.ea.com/ea-sports-fc/ultimate-team/web-app/">
+    <img src="https://www.fifplay.com/img/public/fc-24-logo-alt.png"  alt="" width="80" height="37">
+          <strong >EA FC24</strong>
+
+     </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav" style="margin-left: auto;">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="file:///C:/Users/yoocr/OneDrive/Escritorio/W.V.G/coso/paginas/paginaa.html">Inicio</a>
+        </li>
+    </div>
+  </div>
+</nav>
+
+
+    <h1 class="display-4 font-weight-bold text-center pb4" style=" color: white" >Tips para mejorar en:<span>EAFC 24</span></h1>
+
+  <section>
+    <div class="container">
+      <div class="row">
+   
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4" style="max-width:319px;">
+        <div class="card" id="card1">
+            <figure>
+                <img src="https://i.redd.it/tcthuvsqp1l41.jpg" alt="Imagen 1">
+            </figure>
+            <div class="contenido">
+                <h3>Eres principiante</h3>
+                <p><h4>Para comenzar en el EAFC 24 lo ideal es que empieces con lo básico, ya sea vender las cosas que tengas en el club para poder generar un poco de dinero y comenzar a hacer los SBC (avanzados, híbridos de ligas, híbrido de países).</h4></p>
+                <div class="contenido-adicional" id="contenido-adicional-card1" style="display: none;">
+                    <p><h4>con todo eso podrar comenzar a hacer dinero para dirigirte al mercado de transferencias y poder compar jugadore que estan a un bajo costo ya que lo primero no es jugar online sino squad battle paraque te vallas acostumbrando a las mecanicas del juego y asi de igual manera conseguir sobres y obtener jugadores y asi ir mejorando tu club y tu forma de juagr </h4>
+        
+                <h4>Optimización Financiera:</h4>
+
+                Vende jugadores duplicados o no deseados para obtener monedas.
+                Deshazte de elementos innecesarios para mejorar la situación financiera del club.
+                <h4>SBC Avanzados:</h4>
+
+                Participa en Desafíos de Construcción de Plantillas avanzados para obtener recompensas valiosas.
+                Investiga y realiza SBC para obtener cartas de jugador, paquetes y monedas adicionales.</p>
+                </div>
+                <a href="#" class="leer-mas" onclick="toggleLeerMas('card1')">Leer Más</a>
+            </div>
+        </div>
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4" style="max-width:319px;">
+        <div class="card" id="card2">
+            <figure>
+                <img src="https://i.redd.it/l51jqa5ci5171.jpg" alt="Imagen 2">
+            </figure>
+            <div class="contenido">
+                
+                 <h3>Eres un jugador con experiencia</h3>
+                <p><h4>Ya que tienes conocimientos del videojuego te mostraremos unos pasos a seguir para que sigas creciendo con tu capacidad en el juego</h4></p>
+                <div class="contenido-adicional" id="contenido-adicional-card2" style="display: none;">
+                    <p><h5>si quieres seguir creciendo te recomendamos que primero que nada disfrutes del juego para que tu lo encuentres entretenido y no agobies, explora modos de juegos que sean mas competitivos para que de apoco empieces a familiarizarte mas con el juego, dominar lo que son los tiros con time finishing tiros colocados y cosas que sean de utilidad para seguir mejorando, por eso es ideal juegar con jugadores que sean metas(beunos) para conseguir victorias, una de las cosas importantes es jugar squad battle ya que es un modo de juego ofline en el que puedes conseguir recompensas muy buuenas que haran que mejores tu equipo y asi emvarcarte em divison rival o fut champios.</h5> </p>
+                    <p></p>
+                </div>
+                <a href="#" class="leer-mas" onclick="toggleLeerMas('card2')">Leer Más</a>
+            </div>
+        </div>
+          </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4" style="max-width:319px;">
+        <div class="card" id="card3">
+            <figure>
+                <img src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/322361848/original/7f218d99bda4123f3e907f5a22203d610d83bfea/help-you-to-get-division-elite.jpg" alt="Imagen 3">
+            </figure>
+            <div class="contenido">
+                <h3>Eres un pro jugando</h3>
+                <p><h4>Cuando ya eres un jugador experimentado y consideras que estás en un nivel avanzado en EAFC 24, puedes centrarte en aspectos más detallados de la jugabilidad para perfeccionar tu habilidad.</h4></p>
+                <div class="contenido-adicional" id="contenido-adicional-card3" style="display: none;">
+                    <p><h4>Aquí tienes algunos consejos específicos: 1. Dominio de las Habilidades: 1- Utiliza movimientos de regate efectivos para superar a los defensores y crear oportunidades de gol. 2. Control del Espacio: - Trabaja en controlar el espacio en el campo, tanto en ataque como en defensa. - Utiliza cambios de ritmo y movimientos inteligentes para abrir huecos en la defensa del oponente. 3. Finalización Precisa:- Perfecciona tus habilidades de finalización para aprovechar al máximo las oportunidades de gol. - Aprende a realizar diferentes tipos de tiros, como tiros colocados, tiros de volea y tiros de larga distancia. 4.  Control del Portero: - Aprende a controlar al portero manualmente para intervenir en situaciones críticas. </h4></p>
+                </div>
+                <a href="#" class="leer-mas" onclick="toggleLeerMas('card3')">Leer Más</a>
+            </div>
+        </div>
+
+      </section>
+
+
+
+
+
+    <script>
+        function toggleLeerMas(cardId) {
+            const contenidoAdicional = document.getElementById(`contenido-adicional-${cardId}`);
+            contenidoAdicional.style.display = contenidoAdicional.style.display === 'none' ? 'block' : 'none';
+        }
+
+
+    </script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Carrusel con Enlaces</title>
+</head>
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Carrusel con Enlaces</title>
+</head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Carrusel con Enlaces</title>
+</head>
+
+<body>
+    <div class="container text-center">
+        <section class="textos">
+            <h2>Las formaciones más utilizadas</h2>
+        </section>
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                  
+                        <img class="d-block w-100" src="https://i0.wp.com/elrincondechava.com/wp-content/uploads/2023/09/4-1-2-1-2-Cabecera-EA-Sports-FC-24.jpg?w=750&ssl=1" alt="Primera Imagen" width="650" height="615">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    
+                        <img class="d-block w-100" src="https://i0.wp.com/elrincondechava.com/wp-content/uploads/2023/09/4-2-2-2-Cabecera-EA-Sports-FC-24.jpg?w=750&ssl=1" alt="Segunda Imagen" width="650" height="615">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    
+                        <img class="d-block w-100" src="https://i0.wp.com/elrincondechava.com/wp-content/uploads/2023/09/4-2-3-1-2-Cabecera-EA-Sports-FC-24.jpg?w=750&ssl=1" width="650" height="615">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    
+                        <img class="d-block w-100" src="https://i0.wp.com/elrincondechava.com/wp-content/uploads/2023/09/4-3-2-1-Cabecera-EA-Sports-FC-24.jpg?w=750&ssl=1" width="650" height="615">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                   
+                        <img class="d-block w-100" src="https://i0.wp.com/elrincondechava.com/wp-content/uploads/2023/09/4-3-3-Cabecera-EA-Sports-FC-24.jpg?w=750&ssl=1" width="650" height="615">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                   
+                        <img class="d-block w-100" src="https://i0.wp.com/elrincondechava.com/wp-content/uploads/2023/09/4-4-2-Cabecera-EA-Sports-FC-24.jpg?w=750&ssl=1" width="650" height="615">
+                    </a>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+    </div>
+
+<div style="color: white; background-color: #333; padding: 20px; border-radius: 10px; margin: 20px;">
+    <h2>Consejos </h2>
+    <ul id="color" style="list-style: none; padding: 0;">
+
+        <li style="margin-bottom: 20px; border-bottom: 1px solid #555; padding-bottom: 20px;">
+            <div style="display: flex; align-items: center;">
+                <div style="margin-right: 10px;">
+                    <img src="https://fotografias.flooxernow.com/clipping/cmsimages02/2022/07/28/129E238D-3539-42B7-828B-95E0A7D7A276/djmariio-uno-sus-streams_103.jpg?crop=1231,923,x212,y0&width=1200&height=900&optimize=low&format=webply" href= "https://www.youtube.com/@DjMaRiiO" alt="Martín" style="border-radius: 50%;" height="40" width="40">
+                </div>
+                <strong>Djmariio</strong>
+            </div>
+            <p style="text-align: justify; margin-top: 10px;">
+               La paciencia y la consistencia son clave en FIFA. Enfócate en desarrollar un estilo de juego sólido y practica regularmente. No te desanimes por las derrotas; en cambio, aprende de cada partido y trabaja en mejorar. Experimenta con diferentes tácticas y encuentra la que mejor se adapte a tu estilo. Y sobre todo, diviértete jugando, ¡porque eso es lo más importante!
+            </p>
+        </li>
+
+        <!-- Resto de las opiniones -->
+             <li style="margin-bottom: 20px; border-bottom: 1px solid #555; padding-bottom: 20px;">
+            <div style="display: flex; align-items: center;">
+                <div style="margin-right: 10px;">
+                    <img src="https://yt3.googleusercontent.com/ytc/APkrFKbwOAEta_vtB3e0-wSo10UAvwTvQT-2Yw2JIiEpyA=s900-c-k-c0x00ffffff-no-rj" alt="Martín" style="border-radius: 50%;" height="40" width="35">
+                </div>
+                <strong>Gravesen</strong>
+            </div>
+            <p style="text-align: justify; margin-top: 10px;">
+                Aprender a mantener la posesión y pasar el balón de manera efectiva puede marcar una gran diferencia en tu juego. Además, no subestimes la importancia de defender bien; domina la habilidad de anticipar los movimientos del oponente y usa bien tus jugadores defensivos. ¡Buena suerte y diviértete jugando!
+
+            </p>
+<a class="btn btn-light" data-bs-toggle="collapse" href="#collapseExample" role="button">Dar un Consejo</a>
+        </li>
+    </ul>
+</div>
+
+
+     
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+ 
+ 
+    <script src="script.js"></script>
+
+
+</body>
+</html>
+

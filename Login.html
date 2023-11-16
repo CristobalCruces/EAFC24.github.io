@@ -1,0 +1,193 @@
+<html lang="es">
+ <style type="text/css">
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@0,100;0,200;1,100;1,200&display=swap');
+
+  *{
+    font-family: 'poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background: url(https://www.coliseugeek.com.br/wp-content/uploads/2023/08/coliseu-geek-ea-sports-fc-24-img1.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.contenedor{
+
+    position: fixed;
+    width: 400px;
+    border: 2px solid rgba(255, 255, 255, .6);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);   
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor h2{
+    font-size: 2.3rem;
+    color: white;
+    text-align: center;
+}
+.input-contenedor{
+    position: relative;
+    margin: 30px 0;
+    width: 300px;
+    border-bottom: 2px solid rgb(5, 4, 4);
+}
+.input-contenedor label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: rgb(2, 2, 2);
+    transform: translateY(-50%);
+    font-size: 1rem;
+    pointer-events: none;
+    transition: .3s;
+    font-family: bold;
+}
+
+input:focus ~ label,
+input:valid ~ label{
+    top: -5px;
+}
+.input-contenedor input{
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: - 35px 0 5px;
+    color: white;
+}
+
+.input-contenedor i{
+    position: absolute;
+    color: white;
+    font-size: 1.6rem;
+    top: 19px;
+    right: 8px;
+}
+
+.olvidar{
+    margin: -15px 0 15px;
+    font-size: .9.9em;
+    color: rgb(253, 251, 251);
+    display: flex;
+    justify-content: center;
+}
+.olvidar label input{
+    margin: 3px;
+}
+.olvidar label a:hover{
+    text-decoration: underline;
+}
+button{
+    width: 100%;
+    height: 45px;
+    border-radius: 40px;
+    background: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    font-size: 1rem;
+    transition: .1s;
+}
+button:hover{
+    opacity: .9;
+}
+
+.registrar{
+    font-size: .8rem;
+    color: rgb(255, 252, 252);
+    text-align: center;
+    margin: 20px 0 10px;
+}
+.registrar p a{
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+    transition: .3s;
+}
+.registrar p a:hover{
+    text-decoration: underline;
+}
+</style>
+<link rel="shorcut icon"
+href="data:image/png;base64,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" type="image/png"/>
+  <head>
+        <meta charset="UTF-8">
+        <script src="https:kit.fontawesome.com/a2dd6045c4.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>LOGIN</title>
+    </head>
+    <body>
+
+        <section>
+            <div class="contenedor">
+            <div class="formulario">
+                <form action="#">
+                    <h2 >Iniciar Sesión</h2>
+
+                   <div class="input-contenedor">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="blockquote" required>
+                        <label for="#">Email</label>
+                    </div>
+
+                    <div class="input-contenedor">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" required>
+                        <label for="#">Contraseña</label>
+                    </div>
+                    
+                    <div class="olvidar">
+                        <label for="3">
+                            <input type="checkbox"> Recordar
+                            <a href="#">Olvidé la Contraseña</a>
+                        </label>
+                    </div>
+                </form>  
+                
+                <div>
+
+                    <a href="C:\Users\kmuno\OneDrive\Escritorio\Pagina Web\paginaa.html" class="btn btn-primary btn-block btn-login">
+    <div class="form-group">
+        <button type="submit">
+            <i class="entypo-login"></i> Acceso
+        </button>
+
+<script>
+    // Comprueba si el usuario ya inició sesión al cargar la página
+    window.onload = function() {
+        if (localStorage.getItem("username")) {
+            // Si el nombre de usuario está almacenado, actualiza el navbar
+            actualizarNavbar();
+        }
+    };
+</script>
+    </div>
+</a>
+
+                      <div class="registrar">
+                        <p>No tengo Cuenta<a href="#"> crear una</a></p>
+                      </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+
+ 
+  </body>
+</html>
