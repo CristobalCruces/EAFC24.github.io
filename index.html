@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<style type="text/css">
+
+ body{
+  background-image: url(https://media.contentapi.ea.com/content/dam/ea/fifa/fifa-23/common/news/f23-news-article-page-bg-xl-l-m.jpg.adapt.320w.jpg);
+ }
+footer{
+
+  position:fixed;
+   left:0px;
+   bottom:0px;
+   width:100%;
+   style="background-color:#000;
+}
+
+.c1{
+
+  text-align: center;
+
+ }
+
+</style>
+
+<link rel="shorcut icon"
+href="data:image/png;base64,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" type="image/png"/>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<title>EA FC24</title>
+
+</head>
+<body >
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark" style="background-color: ##000;">
+  <div class="container-fluid">
+    <a class="navbar-brand"  href= " https://www.ea.com/ea-sports-fc/ultimate-team/web-app/">
+   <img src="https://www.fifplay.com/img/public/fc-24-logo-alt.png"  alt="" width="80" height="37">
+          <strong>EA FC24</strong>
+
+     </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav" style="margin-left: auto;">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+        </li>
+        <li class="nav-item list-item-top-nav dropdown">
+                    <a href="https://www.futbin.com/ " target="en-blank" class="nav-link"   data-hover="dropdown" data-delay="0"
+                       data-close-others="false" >
+                        <img alt="sbc" class="sbc_nav desk-nav-img" style="position: relative; width: 16px;" src="https://cdn.futbin.com/design/img/logos/futbin-green-small.png?v=5">FUTBIN<i class="fal fa-chevron-down dd-chevron"></i>
+                    </a>
+         </li>
+         <li class="nav-item list-item-top-nav dropdown">
+                    <a href="https://www.mundodeportivo.com/alfabeta/fut/esta-es-la-forma-mas-barata-de-completar-cualquier-sbc-en-fifa-23-ultimate-team " target="en-blank" class="nav-link"   data-hover="dropdown" data-delay="0"
+                       data-close-others="false" >
+                        <img alt="sbc" class="sbc_nav desk-nav-img" style="position: relative; width: 16px;" src="https://cdn.futbin.com/design/img/sbc_small_color.png">  SBCs <i class="fal fa-chevron-down dd-chevron"></i>
+                    </a>
+                    <a tabindex="0"
+                       id="navSettingsPopover"
+                       class="nav-setting-popover"
+                        data-placement="bottom"
+                       data-html="true"
+                       data-toggle="popover"
+                       data-container=".setting-popover"
+                       data-content='  <div class="popover-inner-nav w-100">
+                        <div  class="setting-option-section">
+                        <div>
+                                <div class="btn-group btn-group-sm w-100" role="group" aria-label="Basic example">
+                                    <button type="button"
+                                            class="btn btn-outline-nav-setting-color settings-theme settings-theme-dark waves-effect py-2 px-3 w-50"
+                                            data-type="dark"
+                                    >
+                                        <i class="fas fa-moon"></i>  Dark
+                                    </button>
+
+                                    <button type="button"
+                                            class="btn btn-outline-nav-setting-color settings-theme settings-theme-light waves-effect py-2 px-3 w-50"
+                                            data-type="light"
+                                    >
+                                        <i class="fas fa-sun"></i>  Light
+                                    </button>
+                                </div>
+                            </div>
+                            <div>
+                               <div class="popover-nav-desc ">Max battery, max style with dark mode.</div>
+                            </div>
+                        </div>
+  
+                        </div>'>    <i class="fas fa-th" ></i></a>
+                </li>
+
+
+                                    <li class="nav-item pt-1">
+                        <a  button type="button" class="btn btn-light"   href="file:///C:/Users/yoocr/OneDrive/Escritorio/W.V.G/coso/paginas/Login.html">
+                            <img src="https://c0.klipartz.com/pngpicture/811/233/gratis-png-escritorio-de-inicio-de-sesion-de-iconos-de-computadora-thumbnail.png"  width="25" height="25"> 
+
+                        </a>
+                    </li>
+    </div>
+  </div>
+</nav>
+
+
+
+          <!--  Carrusel  -->
+
+ <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <title>Ea FC 24</title>
+</head>
+<body>
+
+ <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <a href="">
+        <img class="d-block w-100" src="https://playerbros.com/wp-content/uploads/2023/07/ea-sports-fc-24-sistem-gereksinimleri-fc-24-kac-gb.jpg" alt="Portada" width="650" height="631">
+      </a>
+    </div>
+    <div class="carousel-item">
+      <a href="file:///C:/Users/yoocr/OneDrive/Escritorio/W.V.G/coso/paginas/division%20rivals.html">
+        <img class="d-block w-100" src="https://cloudfront-eu-central-1.images.arcpublishing.com/diarioas/ZMGLOCQNBZAZZMZBWBCIP3XYDY.jpg" alt="Primera Imagen Division rivals" width="650" height="631">
+      </a>
+    </div>
+    <div class="carousel-item">
+      <a href="file:///C:/Users/yoocr/OneDrive/Escritorio/W.V.G/coso/paginas/FutChampions.html#!">
+        <img class="d-block w-100" src="https://esi.si.com/.image/t_share/MjAwOTM0OTkyNzE5NjUyMDQ0/ea-fc-24-champs.webp" alt="Segunda Imagen Fut champion" width="650" height="631">
+      </a>
+    </div>
+    <div class="carousel-item">
+      <a href="file:///C:/Users/yoocr/OneDrive/Escritorio/W.V.G/coso/paginas/Squad%20Battle.html">
+        <img class="d-block w-100" src="https://media.vandal.net/m/9-2023/28/202392812454898_1.jpg.webp" alt="Tercera Imagen Squad Battle" width="650" height="631">
+      </a>
+    </div>
+    <div class="carousel-item">
+      <a href="file:///C:/Users/yoocr/OneDrive/Escritorio/W.V.G/coso/paginas/PaginaTips.html#">
+        <img class="d-block w-100" src="https://media.vandal.net/i/1280x720/9-2023/22/202392213572882_1.jpg.webp" alt="Cuarta Imagen" width="650" height="631">
+      </a>
+    </div>
+  </div>
+
+  <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Anterior</span>
+  </a>
+  <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Siguiente</span>
+  </a>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
+
+<div class="container-fluid">
+        <div class="row">
+                    </div>
+    </div>
+</div>
+
+<div class="row articles-list-holder-inner">
+    <!-- Inserta aquí los bloques de artículos que proporcionaste -->
+</div>
+
+
+      <!-- Eventos del fifa -->
+<br>
+
+<br>
+ <h1 class="c1" style="color: white;">Eventos</h1>
+<div style="display: flex; justify-content: space-between; color: white;">
+  <div class="mid" style="flex: 1;">
+    <h1><b>Team of the Week 9</b></h1>
+    <img id="IF" src="https://assetsio.reedpopcdn.com/ea-fc-24-team-of-the-week-9-cards.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp" width="500" height="350">
+  </div>
+
+  <div class="mid" style="flex: -1200; color: white;">
+    <h1>TTRIPLE THREAT IS COMING!</h1>
+    <img class="TTRIPLE THREAT" src="https://media.futbin.com/design/img/news/roma3_threat.png" width="550" height="350">
+  </div>
+</div>
+
+<br>
+
+<div style="display: flex; justify-content: flex-end; color: white;">
+  <div class="mid" style="flex: 1000;">
+    <h1>Evolution</h1>
+    <img class="Evolution" src="https://areajugones.sport.es/wp-content/uploads/2023/09/evolutions-centurion.jpg" width="500" height="350">
+  </div>
+
+  <div class="mid" style="flex: 1; margin-left: -700px;">
+    <h1>Icono</h1>
+    <img class="Icono" src="https://media.contentapi.ea.com/content/dam/ea/fc/fc-24/ut-icons/common/fc24-icons-full-xl-l-m.jpg.adapt.1920w.jpg" width="500" height="350">
+  </div>
+</div>
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* Estilos para darle formato al foro (puedes personalizar según tus necesidades) */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        #forum-container {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        .comment {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+
+
+
+  <!-- EL foro-->
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #content {
+            /* Agrega estilos al contenido principal si es necesario */
+            padding: 20px;
+        }
+
+        #footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px 0;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        #logoTrain {
+            display: inline-block;
+            animation: moveTrain 10s linear infinite;
+        }
+
+        .logo {
+            display: inline-block;
+            margin: 0 20px;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes moveTrain {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+
+<div class="container center-card" style="display: flex; justify-content: center; align-items: center; height: 100vh; background: rgba(0, 0, 0, 0.5);">
+  <div class="card" style="max-width: 600px; background-color: black; border: none; color: white;">
+
+    <!-- Contenido de la tarjeta -->
+    <img class="card-img-top" src="https://www.eltiempo.com/files/article_multimedia/uploads/2018/09/26/5babe883452d5.jpeg" alt="Card image cap">
+    <div class="card-body">
+      <h4 class="card-title">Historia del FIFA</h4>
+      <p class="card-text" id="card-text">
+        Aquí puedes leer los principios de FIFA, desde el año que se creó hasta el día de hoy.
+      </p>
+      <p class="card-text" id="card-text-more" style="display: none;">
+        <!-- Contenido adicional oculto -->
+      </p>
+      <a href="https://www.eltiempo.com/tecnosfera/videojuegos/historia-del-videojuego-fifa-en-sus-25-anos-273550" class="btn btn-primary" id="toggle-button" target="en-blank">Leer más</a>
+    </div>
+
+  </div>
+</div>
+
+
+
+    <div id="content">
+        <!-- Tu contenido principal aquí -->
+       
+    </div>
+
+    <div id="footer" >
+        <div id="logoTrain">
+            <div class="logo">
+                <img src="https://static.wikia.nocookie.net/universecwsports/images/3/37/PLeng.png/revision/latest?cb=20200404132848&path-prefix=es" alt="Logo 1 Premier" width="40" height="30">
+            </div>
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/LaLiga_Santander_logo_%28stacked%29.svg/1197px-LaLiga_Santander_logo_%28stacked%29.svg.png" alt="Logo 2 santander" width="40" height="30">
+            </div>
+            <div class="logo">
+                <img src="https://a2.espncdn.com/combiner/i?img=%2Fi%2Fleaguelogos%2Fsoccer%2F500%2F10.png" alt="Logo 3 bundes" width="40" height="30">
+            </div>
+            <div class="logo">
+                <img src="https://1000marcas.net/wp-content/uploads/2020/03/Italian-Serie-A-Logo-2019.png" alt="Logo 4 serie A" width="40" height="30">
+            </div>
+            <div class="logo">
+                <img src="https://brandlogos.net/wp-content/uploads/2020/09/ligue-1-logo.png" alt="Logo 5 Francesa" width="40" height="30">
+            </div>
+            <div class="logo">
+                <img src="https://tiermaker.com/images/templates/futuros-iconos-fifa-15355722/153557221664310380.png" alt="Logo 6 de iconos" width="40" height="30">
+            </div>
+            <div class="logo">
+                <img src="https://static.wikia.nocookie.net/logopedia/images/7/7b/Logocampeonatoclscotiabank.png/revision/latest/scale-to-width-down/200?cb=20210207022955&path-prefix=es" alt="Logo 7 de la liga chilena " width="40" height="30">
+            </div>
+            <div class="logo">
+                <img src="https://static.wikia.nocookie.net/logopedia/images/0/03/Logotipo_de_la_Liga_Profesional_de_F%C3%BAtbol_Argentino.png/revision/latest?cb=20210410194003&path-prefix=es" alt="Logo 8 liga argentina " width="40" height="30">
+            </div>
+            <div class="logo">
+                <img src="https://1000marcas.net/wp-content/uploads/2020/03/Campeonato-Brasileiro-S%C3%A9rie-A-logo.png" alt="Logo 9 liga de brasil " width="40" height="30">
+            </div>
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/S%C3%ADmbolo_da_Liga_Portuguesa_de_Futebol_Profissional.png" alt="Logo 10 liga nos(portugal)" width="40" height="30">
+            </div>
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/MLS_crest_logo_RGB_gradient.svg/800px-MLS_crest_logo_RGB_gradient.svg.png" alt="Logo 10 liga mls" width="40" height="30">
+            </div>
+            <!-- Agrega más logos aquí -->
+        </div>
+    </div>
+
+
+</body>
+</html>
